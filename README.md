@@ -1,1 +1,1 @@
-"# color-checker"
+# color-checker
