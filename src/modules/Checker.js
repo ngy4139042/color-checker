@@ -1,5 +1,6 @@
 import { useState } from "react";
 import "./Checker.css";
+import Radios from "./Radios";
 
 export default function Checker() {
   const [color, setColor] = useState("white");
@@ -19,17 +20,7 @@ export default function Checker() {
     setInputValue("");
   }
 
-  const changeCriteria = (e) => {
-    if (e.target.className === "critName") {
-      setCriteria("name");
-      setColor("white");
-      setInputValue("");
-    } else {
-      setCriteria("hex");
-      setColor("white");
-      setInputValue("");
-    }
-  };
+  
 
   return (
     <div className="checker">
@@ -38,27 +29,7 @@ export default function Checker() {
         <input onChange={applyColor} value={inputValue}></input>
         <button className="reset" onClick={resetInput}>reset</button>
       </div>
-      <div>
-        <label>
-          <input
-            type="radio"
-            name="color"
-            className="critName"
-            onChange={changeCriteria}
-            defaultChecked
-          ></input>
-          <span>name</span>
-        </label>
-        <label>
-          <input
-            type="radio"
-            name="color"
-            className="critHex"
-            onChange={changeCriteria}
-          ></input>
-          <span>hex</span>
-        </label>
-      </div>
+      <Radios setColor={setColor} setCriteria={setCriteria} setInputValue={setInputValue}></Radios>
     </div>
   );
 }
