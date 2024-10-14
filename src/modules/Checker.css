@@ -1,4 +1,27 @@
+.checker {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+
 .shower {
   width: 300px;
   height: 300px;
+  border: 3px solid black;
+  border-radius: 20px;
+}
+
+.searcher {
+  width: 300px;
+  display: flex;
+  gap: 10px;
+}
+
+.searcher > input {
+  flex-grow: 4;
+}
+.searcher > button {
+  flex-grow: 1;
 }

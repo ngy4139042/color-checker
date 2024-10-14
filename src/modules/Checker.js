@@ -2,7 +2,7 @@ import { useState } from "react";
 import "./Checker.css";
 
 export default function Checker() {
-  const [color, setColor] = useState("pink");
+  const [color, setColor] = useState("white");
   const [inputValue, setInputValue] = useState("");
   const [criteria, setCriteria] = useState("name");
 
@@ -14,6 +14,10 @@ export default function Checker() {
       setColor(`#${e.target.value}`);
     }
   };
+
+  const resetInput = (e) => {
+    setInputValue("");
+  }
 
   const changeCriteria = (e) => {
     if (e.target.className === "critName") {
@@ -30,8 +34,10 @@ export default function Checker() {
   return (
     <div className="checker">
       <div className="shower" style={{ backgroundColor: color }}></div>
-      <input onChange={applyColor} value={inputValue}></input>
-      <button>reset</button>
+      <div className="searcher">
+        <input onChange={applyColor} value={inputValue}></input>
+        <button className="reset" onClick={resetInput}>reset</button>
+      </div>
       <div>
         <label>
           <input

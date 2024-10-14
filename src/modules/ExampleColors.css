@@ -1,0 +1,11 @@
+.example-color {
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+}
+
+.preview {
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+}

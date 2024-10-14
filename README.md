@@ -1,1 +1,1 @@
-# color-checker
+# little design
