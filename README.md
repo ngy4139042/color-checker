@@ -1,5 +1,6 @@
-up&down game [001]
+## Added module
+### a module that let colors be modified, darker, lighter ... etc.
 
-version 0.1.3
-
-- bug fixed
+## Improved design
+### Improved design by a module that is related to color modifing.
+### the border of shower div (children element of Checker component) now follows the color of checker div, modified in darker version.
